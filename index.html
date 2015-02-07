@@ -72,7 +72,7 @@ head(myData, n = 3)
 <li>A histogram in R can be plotted by running the following command.</li>
 </ol>
 
-<pre><code class="r">hist(myData, col = &quot;cyan&quot;, prob = T)
+<pre><code class="r">hist(myData, col = &quot;cyan&quot;, prob = T, breaks = 10)
 # to plot empirical density
 lines(density(myData), col = &quot;red&quot;, lwd = &quot;2&quot;)
 </code></pre>
@@ -113,6 +113,7 @@ lines(density(myData), col = &quot;red&quot;, lwd = &quot;2&quot;)
   </hgroup>
   <article data-timings="">
     <ol>
+<li>Shiny app creates histogram for randomly generated observations from normal distribution where mean, variance and number of observation and number of breaks in histogram will be in user&#39;s control.<br></li>
 <li>Plot of histogram will be changing due to change of data or number of breaks. Hence two reactive functions are implented in server.R file.<br>
 
 <ul>
@@ -120,7 +121,6 @@ lines(density(myData), col = &quot;red&quot;, lwd = &quot;2&quot;)
 <li>Second reactive function takes care of number of breaks.<br></li>
 </ul></li>
 <li>Returns plotoutput that plots histogram with specified number of breaks and an empirical density estimate colored with red.<br></li>
-<li></li>
 </ol>
 
   </article>
